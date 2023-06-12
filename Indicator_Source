@@ -193,3 +193,6 @@ debug.setupvalue(bedwars.DamageIndicator, 10, {
 		return TweenService:Create(obj, ...)
 	end
 })
+-- skidded and made by Skidded Rock#9170 
+-- ezbio: https://e-z.bio/rock
+-- server: https://discord.gg/dFhkVqVHQQ
