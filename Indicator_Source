@@ -164,7 +164,9 @@ bedwars = {
 -- main variables end here
 
 -- actual script starts here
-
+local FunnyIndicator = true
+while FunnyIndicator == true do
+wait(0.5)
 local damagetab = debug.getupvalue(bedwars.DamageIndicator, 2)
 damagetab.strokeThickness = false
 damagetab.textSize = 32
@@ -194,6 +196,7 @@ debug.setupvalue(bedwars.DamageIndicator, 10, {
 		return TweenService:Create(obj, ...)
 	end
 })
+end
 -- skidded and made by Skidded Rock#9170 
 -- ezbio: https://e-z.bio/rock
 -- server: https://discord.gg/dFhkVqVHQQ
