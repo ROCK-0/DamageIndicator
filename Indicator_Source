@@ -161,8 +161,9 @@ bedwars = {
 	["VehicleController"] = KnitClient.Controllers.VehicleController,
 	["WeldTable"] = require(repstorage.TS.util["weld-util"]).WeldUtil,
 }
+-- main variables end here
 
-
+-- actual script starts here
 
 local damagetab = debug.getupvalue(bedwars.DamageIndicator, 2)
 damagetab.strokeThickness = false
