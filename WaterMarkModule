@@ -1,0 +1,195 @@
+local ScreenGui = Instance.new("ScreenGui")
+local Holder = Instance.new("Frame")
+local UIShadow = Instance.new("Frame")
+local ambientShadow = Instance.new("ImageLabel")
+local penumbraShadow = Instance.new("ImageLabel")
+local umbraShadow = Instance.new("ImageLabel")
+local Watermark = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local ImageLabel = Instance.new("ImageLabel")
+
+--Properties:
+local CreateZAZA = function()
+	ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+	ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+		Holder.Name = "Holder"
+		Holder.Parent = ScreenGui
+		Holder.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Holder.BackgroundTransparency = 1.000
+		Holder.Position = UDim2.new(0, 0, -0.00124688284, 0)
+		Holder.Size = UDim2.new(0, 215, 0, 83)
+		Holder.ZIndex = 7
+
+			UIShadow.Name = "UI-Shadow"
+			UIShadow.Parent = Holder
+			UIShadow.BackgroundTransparency = 1.000
+			UIShadow.Position = UDim2.new(0.0234141145, 0, 0.0943575054, 0)
+			UIShadow.Size = UDim2.new(0, 209, 0, 81)
+			UIShadow.ZIndex = -999999999
+
+				ambientShadow.Name = "ambientShadow"
+				ambientShadow.Parent = UIShadow
+				ambientShadow.AnchorPoint = Vector2.new(0.5, 0.5)
+				ambientShadow.BackgroundTransparency = 1.000
+				ambientShadow.Position = UDim2.new(0.495285243, 0, 0.443513989, 4)
+				ambientShadow.Size = UDim2.new(1.02873123, 5, 1.01203918, 5)
+				ambientShadow.Image = "rbxassetid://1316045217"
+				ambientShadow.ImageColor3 = Color3.fromRGB(0, 0, 0)
+				ambientShadow.ImageTransparency = 0.650
+				ambientShadow.ScaleType = Enum.ScaleType.Slice
+				ambientShadow.SliceCenter = Rect.new(10, 10, 118, 118)
+
+					penumbraShadow.Name = "penumbraShadow"
+					penumbraShadow.Parent = UIShadow
+					penumbraShadow.AnchorPoint = Vector2.new(0.5, 0.5)
+					penumbraShadow.BackgroundTransparency = 1.000
+					penumbraShadow.Position = UDim2.new(0.495285243, 0, 0.443513989, 4)
+					penumbraShadow.Size = UDim2.new(1.02873123, 5, 1.01203918, 5)
+					penumbraShadow.Image = "rbxassetid://1316045217"
+					penumbraShadow.ImageColor3 = Color3.fromRGB(0, 0, 0)
+					penumbraShadow.ImageTransparency = 0.650
+					penumbraShadow.ScaleType = Enum.ScaleType.Slice
+					penumbraShadow.SliceCenter = Rect.new(10, 10, 118, 118)
+
+				umbraShadow.Name = "umbraShadow"
+				umbraShadow.Parent = UIShadow
+				umbraShadow.AnchorPoint = Vector2.new(0.5, 0.5)
+				umbraShadow.BackgroundTransparency = 1.000
+				umbraShadow.Position = UDim2.new(0.495285243, 0, 0.443513989, 4)
+				umbraShadow.Size = UDim2.new(1.02873123, 5, 1.01203918, 5)
+				umbraShadow.Image = "rbxassetid://1316045217"
+				umbraShadow.ImageColor3 = Color3.fromRGB(0, 0, 0)
+				umbraShadow.ImageTransparency = 0.650
+				umbraShadow.ScaleType = Enum.ScaleType.Slice
+				umbraShadow.SliceCenter = Rect.new(10, 10, 118, 118)
+
+		Watermark.Name = "Watermark"
+		Watermark.Parent = Holder
+		Watermark.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+		Watermark.BackgroundTransparency = 0.250
+		Watermark.Position = UDim2.new(0.0234229919, 0, 0.127182052, 0)
+		Watermark.Size = UDim2.new(0, 205, 0, 72)
+
+		UICorner.Parent = Watermark
+
+	TextLabel.Parent = Watermark
+	TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	TextLabel.BackgroundTransparency = 1.000
+	TextLabel.Position = UDim2.new(0.0477747098, 0, 0.126956195, 0)
+	TextLabel.Size = UDim2.new(0, 89, 0, 50)
+	TextLabel.Font = Enum.Font.Unknown
+	TextLabel.Text = "Meteor"
+	TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+	TextLabel.TextScaled = true
+	TextLabel.TextSize = 32.000
+	TextLabel.TextWrapped = true
+
+	TextLabel_2.Parent = Watermark
+	TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	TextLabel_2.BackgroundTransparency = 1.000
+	TextLabel_2.Position = UDim2.new(0.467136055, 0, 0.436815321, 0)
+	TextLabel_2.Size = UDim2.new(0, 57, 0, 15)
+	TextLabel_2.Font = Enum.Font.Unknown
+	TextLabel_2.Text = "Remade"
+	TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+	TextLabel_2.TextScaled = true
+	TextLabel_2.TextSize = 32.000
+	TextLabel_2.TextWrapped = true
+
+	ImageLabel.Parent = Watermark
+	ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	ImageLabel.BackgroundTransparency = 1.000
+	ImageLabel.Position = UDim2.new(0.697560906, 0, 0.166666687, 0)
+	ImageLabel.Size = UDim2.new(0, 62, 0, 59)
+	ImageLabel.Image = "http://www.roblox.com/asset/?id=7944880015"
+end
+
+local DeleteZAZA = function()
+	if game.Players.LocalPlayer.PlayerGui.watermark then
+		game.Players.LocalPlayer.PlayerGui.watermark.Holder:Destroy()
+	end
+end
+-- Scripts:
+
+local function CTEGOPZ_fake_script() -- Holder.noti_ig 
+	local script = Instance.new('LocalScript', Holder)
+
+	local UIS = game:GetService('UserInputService')
+	local frame = script.Parent
+	local dragToggle = nil
+	local dragSpeed = 0.25
+	local dragStart = nil
+	local startPos = nil
+	
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	end
+	
+	frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+			dragToggle = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	
+	UIS.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragToggle then
+				updateInput(input)
+			end
+		end
+	end)
+	
+	wait(2)
+	local noti = true
+	
+	while noti == true do
+		wait(0.4)
+		script.Parent.Notification:Play()
+		wait(0.4)
+		script.Parent.Notification:Play()
+		wait(0.4)
+		script.Parent.Notification:Play()
+		wait(0.4)
+		script.Parent.Notification:Play()
+		wait(0.4)
+		script.Parent.Notification:Play()
+		wait(0.4)
+		script.Parent.Notification:Play()
+		wait(0.4)
+		script.Parent.Notification:Play()
+		wait(0.4)
+		script.Parent.Notification:Play()
+		wait(0.4)
+		script.Parent.Notification:Play()
+		wait(0.4)
+		script.Parent.Notification:Play()
+		wait(0.4)
+		script.Parent.Notification:Play()
+		wait(0.4)
+		script.Parent.Notification:Play()
+		wait(0.4)
+		script.Parent.Notification:Play()
+		wait(0.4)
+		script.Parent.Notification:Play()
+		wait(0.4)
+		script.Parent.Notification:Play()
+		wait(1)
+		noti = false
+	end
+	
+	
+end
+coroutine.wrap(CTEGOPZ_fake_script)()
