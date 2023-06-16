@@ -1,5 +1,14 @@
--- welcome
-local welcome = function()
+local welcome = Instance.new("ScreenGui")
+local Welcome = Instance.new("Frame")
+local Corner = Instance.new("UICorner")
+local Title1 = Instance.new("TextLabel")
+local Title2 = Instance.new("TextLabel")
+local Label = Instance.new("TextLabel")
+local Play = Instance.new("TextButton")
+local Corner_2 = Instance.new("UICorner")
+local UIGradient = Instance.new("UIGradient")
+
+local WelcomeNotif = function()
 welcome.Name = "welcome"
 welcome.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 welcome.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -70,16 +79,13 @@ Corner_2.Parent = Play
 UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(32, 0, 139)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 0, 0))}
 UIGradient.Parent = Welcome
 	
-game:GetService("GuiService").Changed:Connect(function()
+	game:GetService("GuiService").Changed:Connect(function()
 		Welcome.Position = UDim2.new(0.374985069, 0, 0.307798028, 0)
 	end)
 end
+-- script part ig
 
-
-
--- script part
-
-local function KNPS_fake_script() -- Welcome.LocalScript 
+local function VWCBVRN_fake_script() -- Welcome.LocalScript 
 	local script = Instance.new('LocalScript', Welcome)
 
 	local PlayerName = game.Players.LocalPlayer.Name
@@ -91,8 +97,8 @@ local function KNPS_fake_script() -- Welcome.LocalScript
 	
 	
 end
-coroutine.wrap(KNPS_fake_script)()
-local function OXPVZK_fake_script() -- Play.LocalScript 
+coroutine.wrap(VWCBVRN_fake_script)()
+local function JHSYIA_fake_script() -- Play.LocalScript 
 	local script = Instance.new('LocalScript', Play)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -101,6 +107,6 @@ local function OXPVZK_fake_script() -- Play.LocalScript
 		
 	end)
 end
-coroutine.wrap(OXPVZK_fake_script)()
+coroutine.wrap(JHSYIA_fake_script)()
 
-welcome()
+WelcomeNotif()
