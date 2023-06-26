@@ -1,3 +1,8 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
 local watermark = Instance.new("ScreenGui")
 local watermarkholder = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
@@ -9,10 +14,11 @@ local TextLabel = Instance.new("TextLabel")
 local TextLabel_2 = Instance.new("TextLabel")
 local placeid = Instance.new("TextLabel")
 
-
+--Properties:
 watermark.ResetOnSpawn = true
 watermark.Name = "watermark"
 watermark.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+watermark.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 watermarkholder.Name = "watermarkholder"
 watermarkholder.Parent = watermark
@@ -67,7 +73,7 @@ TextLabel.BorderSizePixel = 0
 TextLabel.Position = UDim2.new(0.0156716406, 0, 0.0187032428, 0)
 TextLabel.Size = UDim2.new(0, 144, 0, 47)
 TextLabel.Font = Enum.Font.GothamBold
-TextLabel.Text = "Crystal Client"
+TextLabel.Text = "Meteor Client Remade"
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.TextSize = 21.000
 TextLabel.TextWrapped = true
@@ -99,10 +105,55 @@ placeid.TextScaled = true
 placeid.TextSize = 21.000
 placeid.TextWrapped = true
 
+-- Scripts:
 
-local function RTKN_fake_script() -- placeid.LocalScript 
+local function MAYKJMM_fake_script() -- placeid.LocalScript 
 	local script = Instance.new('LocalScript', placeid)
 
 	script.Parent.Text = game.PlaceId
 end
-coroutine.wrap(RTKN_fake_script)() 
+coroutine.wrap(MAYKJMM_fake_script)()
+local function EEKAYIZ_fake_script() -- watermarkholder.drag 
+	local script = Instance.new('LocalScript', watermarkholder)
+
+	local UserInputService = game:GetService("UserInputService")
+	
+	local gui = script.Parent
+	
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+	
+	local function update(input)
+		local delta = input.Position - dragStart
+		gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	end
+	
+	gui.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = gui.Position
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	gui.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	UserInputService.InputChanged:Connect(function(input)
+		if input == dragInput and dragging then
+			update(input)
+		end
+	end)
+end
+coroutine.wrap(EEKAYIZ_fake_script)()
