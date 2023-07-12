@@ -4,35 +4,72 @@
 -- Instances:
 
 local watermark = Instance.new("ScreenGui")
-local watermarkholder = Instance.new("Frame")
+local holder = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
-local DropShadowHolder = Instance.new("Frame")
-local DropShadow = Instance.new("ImageLabel")
-local line = Instance.new("Frame")
-local icon = Instance.new("ImageLabel")
 local TextLabel = Instance.new("TextLabel")
 local TextLabel_2 = Instance.new("TextLabel")
-local placeid = Instance.new("TextLabel")
+local ImageLabel = Instance.new("ImageLabel")
+local DropShadowHolder = Instance.new("Frame")
+local DropShadow = Instance.new("ImageLabel")
+local TextButton = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local DropShadowHolder_2 = Instance.new("Frame")
+local DropShadow_2 = Instance.new("ImageLabel")
 
 --Properties:
-watermark.ResetOnSpawn = true
+
 watermark.Name = "watermark"
 watermark.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-watermark.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+watermark.ResetOnSpawn = true
 
-watermarkholder.Name = "watermarkholder"
-watermarkholder.Parent = watermark
-watermarkholder.AnchorPoint = Vector2.new(0.5, 0.5)
-watermarkholder.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-watermarkholder.BackgroundTransparency = 0.500
-watermarkholder.BorderSizePixel = 0
-watermarkholder.Position = UDim2.new(0.0850746334, 0, 0.0812718272, 0)
-watermarkholder.Size = UDim2.new(0, 200, 0, 100)
+holder.Name = "holder"
+holder.Parent = watermark
+holder.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+holder.BorderColor3 = Color3.fromRGB(0, 0, 0)
+holder.BorderSizePixel = 0
+holder.Position = UDim2.new(0.0179999992, -13, 0.0260000005, 248)
+holder.Size = UDim2.new(0, 255, 0, 70)
 
-UICorner.Parent = watermarkholder
+UICorner.Parent = holder
+
+TextLabel.Parent = holder
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.041825898, 0, 0, 0)
+TextLabel.Size = UDim2.new(0, 192, 0, 55)
+TextLabel.Font = Enum.Font.ArialBold
+TextLabel.Text = "Feather Client"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 28.000
+TextLabel.TextWrapped = true
+TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+TextLabel_2.Parent = holder
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.041825898, 0, 0.569849968, 0)
+TextLabel_2.Size = UDim2.new(0, 192, 0, 15)
+TextLabel_2.Font = Enum.Font.ArialBold
+TextLabel_2.Text = "by sk1dded (@RuckConfigs)"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextSize = 13.000
+TextLabel_2.TextWrapped = true
+TextLabel_2.TextXAlignment = Enum.TextXAlignment.Left
+
+ImageLabel.Parent = holder
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Position = UDim2.new(0.697708189, 0, 0.100000001, 0)
+ImageLabel.Size = UDim2.new(0, 91, 0, 55)
+ImageLabel.Image = "rbxassetid://14043508302"
+ImageLabel.ImageColor3 = Color3.fromRGB(255, 71, 71)
 
 DropShadowHolder.Name = "DropShadowHolder"
-DropShadowHolder.Parent = watermarkholder
+DropShadowHolder.Parent = holder
 DropShadowHolder.BackgroundTransparency = 1.000
 DropShadowHolder.BorderSizePixel = 0
 DropShadowHolder.Size = UDim2.new(1, 0, 1, 0)
@@ -43,78 +80,52 @@ DropShadow.Parent = DropShadowHolder
 DropShadow.AnchorPoint = Vector2.new(0.5, 0.5)
 DropShadow.BackgroundTransparency = 1.000
 DropShadow.BorderSizePixel = 0
-DropShadow.Position = UDim2.new(0.5, 0, 0.5, 0)
-DropShadow.Size = UDim2.new(1, 47, 1, 47)
+DropShadow.Position = UDim2.new(0.501458108, 0, 0.5, 0)
+DropShadow.Size = UDim2.new(1.03428876, 47, 1.08571434, 47)
 DropShadow.ZIndex = 0
 DropShadow.Image = "rbxassetid://6014261993"
 DropShadow.ImageColor3 = Color3.fromRGB(0, 0, 0)
-DropShadow.ImageTransparency = 0.120
 DropShadow.ScaleType = Enum.ScaleType.Slice
 DropShadow.SliceCenter = Rect.new(49, 49, 450, 450)
 
-line.Name = "line"
-line.Parent = watermarkholder
-line.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-line.BorderSizePixel = 0
-line.Position = UDim2.new(0.000600013707, 0, 0.479999989, 0)
-line.Size = UDim2.new(0, 200, 0, 1)
+TextButton.Parent = holder
+TextButton.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0, 0, 1.12857139, 0)
+TextButton.Size = UDim2.new(0, 83, 0, 31)
+TextButton.Font = Enum.Font.GothamBold
+TextButton.Text = "Open Chat"
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextSize = 14.000
 
-icon.Name = "icon"
-icon.Parent = watermarkholder
-icon.BackgroundTransparency = 1.000
-icon.Position = UDim2.new(0.754999995, 0, 0.0199999958, 0)
-icon.Size = UDim2.new(0, 41, 0, 41)
-icon.Image = "rbxassetid://2790546266"
+UICorner_2.Parent = TextButton
 
-TextLabel.Parent = watermarkholder
-TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.BackgroundTransparency = 1.000
-TextLabel.BorderSizePixel = 0
-TextLabel.Position = UDim2.new(0.0156716406, 0, 0.0187032428, 0)
-TextLabel.Size = UDim2.new(0, 144, 0, 47)
-TextLabel.Font = Enum.Font.GothamBold
-TextLabel.Text = "Meteor Client Remade"
-TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.TextSize = 21.000
-TextLabel.TextWrapped = true
+DropShadowHolder_2.Name = "DropShadowHolder"
+DropShadowHolder_2.Parent = TextButton
+DropShadowHolder_2.BackgroundTransparency = 1.000
+DropShadowHolder_2.BorderSizePixel = 0
+DropShadowHolder_2.Size = UDim2.new(1, 0, 1, 0)
+DropShadowHolder_2.ZIndex = 0
 
-TextLabel_2.Parent = watermarkholder
-TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_2.BackgroundTransparency = 1.000
-TextLabel_2.BorderSizePixel = 0
-TextLabel_2.Position = UDim2.new(0.0261940379, 0, 0.533541083, 0)
-TextLabel_2.Size = UDim2.new(0, 109, 0, 42)
-TextLabel_2.Font = Enum.Font.GothamBold
-TextLabel_2.Text = "bedwars.com/"
-TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_2.TextScaled = true
-TextLabel_2.TextSize = 21.000
-TextLabel_2.TextWrapped = true
-
-placeid.Name = "placeid"
-placeid.Parent = watermarkholder
-placeid.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-placeid.BackgroundTransparency = 1.000
-placeid.BorderSizePixel = 0
-placeid.Position = UDim2.new(0.562537372, 0, 0.556034863, 0)
-placeid.Size = UDim2.new(0, 79, 0, 40)
-placeid.Font = Enum.Font.GothamBold
-placeid.Text = "123212312313"
-placeid.TextColor3 = Color3.fromRGB(255, 255, 255)
-placeid.TextScaled = true
-placeid.TextSize = 21.000
-placeid.TextWrapped = true
+DropShadow_2.Name = "DropShadow"
+DropShadow_2.Parent = DropShadowHolder_2
+DropShadow_2.AnchorPoint = Vector2.new(0.5, 0.5)
+DropShadow_2.BackgroundTransparency = 1.000
+DropShadow_2.BorderSizePixel = 0
+DropShadow_2.Position = UDim2.new(0.5, 0, 0.5, 0)
+DropShadow_2.Size = UDim2.new(1, 47, 1, 47)
+DropShadow_2.ZIndex = 0
+DropShadow_2.Image = "rbxassetid://6014261993"
+DropShadow_2.ImageColor3 = Color3.fromRGB(0, 0, 0)
+DropShadow_2.ImageTransparency = 0.500
+DropShadow_2.ScaleType = Enum.ScaleType.Slice
+DropShadow_2.SliceCenter = Rect.new(49, 49, 450, 450)
 
 -- Scripts:
 
-local function MAYKJMM_fake_script() -- placeid.LocalScript 
-	local script = Instance.new('LocalScript', placeid)
-
-	script.Parent.Text = game.PlaceId
-end
-coroutine.wrap(MAYKJMM_fake_script)()
-local function EEKAYIZ_fake_script() -- watermarkholder.drag 
-	local script = Instance.new('LocalScript', watermarkholder)
+local function AENUJVJ_fake_script() -- holder.Dragify 
+	local script = Instance.new('LocalScript', holder)
 
 	local UserInputService = game:GetService("UserInputService")
 	
@@ -156,4 +167,26 @@ local function EEKAYIZ_fake_script() -- watermarkholder.drag
 		end
 	end)
 end
-coroutine.wrap(EEKAYIZ_fake_script)()
+coroutine.wrap(AENUJVJ_fake_script)()
+local function YJHF_fake_script() -- holder.LocalScript 
+	local script = Instance.new('LocalScript', holder)
+
+	game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Chat, false) 
+	
+end
+coroutine.wrap(YJHF_fake_script)()
+local function XTVKZHI_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	local chat_open = false
+	
+	script.Parent.MouseButton1Up:Connect(function()
+		if chat_open == false then
+			local chat_open = true
+			game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Chat, true)
+		end
+	end)
+	
+	
+end
+coroutine.wrap(XTVKZHI_fake_script)()
